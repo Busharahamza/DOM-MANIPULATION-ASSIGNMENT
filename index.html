@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Registration System</title>
+  <meta name="description" content="A user-friendly system for student data enrollment" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="main-header">
+    <h1>Student Registration System</h1>
+    <p>A simple & efficient way to manage student records</p>
+  </header>
+
+  <main class="container">
+    <!-- Registration Form -->
+    <section class="form-section">
+      <h2>Register New Student</h2>
+    </br>
+      <form id="studentForm">
+        <div class="form-group">
+          <label for="studentName">Student Name</label>
+          <input type="text" id="studentName" required />
+        </div>
+    </br>
+        <div class="form-group">
+          <label for="studentId">Student ID</label>
+          <input type="text" id="studentId" required />
+        </div>
+    </br>
+        <div class="form-group">
+          <label for="email">Email ID</label>
+          <input type="email" id="email" required />
+        </div>
+    </br>
+        <div class="form-group">
+          <label for="contact">Contact Number</label>
+          <input type="text" id="contact" required />
+        </div>
+    </br>
+        <button type="submit" id="submitBtn">Add Student</button>
+        <button type="button" id="updateBtn" class="hidden">Update Student</button>
+        <button type="button" id="cancelEditBtn" class="hidden">Cancel</button>
+      </form>
+      <p id="errorMsg" class="error"></p>
+    </section>
+
+    <!-- Display Section -->
+     <!-- Table to enter Student details filled -->
+    <section class="display-section">
+      <h2>Registered Students</h2>
+    </br>
+      <div class="table-wrapper" id="tableWrapper">
+        <table id="studentsTable">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Student ID</th>
+              <th>Email</th>
+              <th>Contact No.</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="studentsBody">
+            <!-- Dynamic Rows -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+</br>
+<!-- Footer -->
+  <footer class="main-footer">
+    <p>&copy; 2025 Student Registration System</p>
+  </footer>
+<!-- JavaScript file -->
+  <script src="script.js"></script>
+</body>
+</html>

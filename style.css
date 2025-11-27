@@ -1,0 +1,150 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f7fb;
+  color: #222;
+}
+
+.main-header {
+  text-align: center;
+  padding: 1.5rem;
+  background: blueviolet;
+  color: white;
+}
+
+.main-header h1 {
+  margin-bottom: 0.3rem;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 1.5rem auto;
+  padding: 0 1rem;
+  display: grid;
+  grid-template-columns: 1.1fr 1.5fr;
+  gap: 1.5rem;
+}
+
+/* Form section */
+.form-section, .display-section {
+  background: white;
+  padding: 1rem 1.2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.form-group {
+  margin-bottom: 0.8rem;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+input {
+  padding: 0.45rem 0.6rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  margin-right: 0.4rem;
+  border: none;
+  border-radius: 4px;
+  background: blueviolet;
+  color: white;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background: blueviolet;
+}
+
+button.hidden {
+  display: none;
+}
+
+.error {
+  color: #d90429;
+  margin-top: 0.5rem;
+}
+
+/* Table */
+.table-wrapper {
+  max-height: 300px; /* vertical scroll area */
+  overflow-y: auto;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  background: #e3e9f5;
+  position: sticky;
+  top: 0;
+}
+
+th, td {
+  padding: 0.6rem;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.actions-btn {
+  display: inline-flex;
+  gap: 0.3rem;
+}
+
+.actions-btn button {
+  background: #3bbd9e;
+}
+
+.actions-btn .delete-btn {
+  background: rgb(208, 28, 28);
+}
+
+.actions-btn .delete-btn:hover {
+  background: #ff1654;
+}
+
+/* Footer */
+.main-footer {
+  margin-top: 1.5rem;
+  text-align: center;
+  padding: 0.8rem;
+  background: blueviolet;
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding: 0 0.5rem;
+  }
+  .form-section, .display-section {
+    padding: 0.8rem;
+  }
+  th, td {
+    font-size: 0.85rem;
+  }
+}
